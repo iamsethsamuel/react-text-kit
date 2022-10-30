@@ -1,0 +1,36 @@
+.glow {
+    color: var(--glow-text-color);
+    text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 40px var(--glow-color),
+        0 0 80px var(--glow-color), 0 0 120px var(--glow-color), 0 0 200px var(--glow-color),
+        0 0 300px var(--glow-color), 0 0 400px var(--glow-color);
+}
+
+.animate-glow {
+    display: flex;
+    flex-direction: row;
+}
+.animate-glow > span {
+    animation: glow-animation var(--glow-animation-duration) linear var(--glow-animation-type);
+    animation-delay: calc(0.1s * var(--glow));
+}
+
+@keyframes glow-animation {
+    0% {
+        filter: blur(0px) hue-rotate(0deg);
+        text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 40px var(--glow-color),
+            0 0 80px var(--glow-color), 0 0 120px var(--glow-color), 0 0 200px var(--glow-color),
+            0 0 300px var(--glow-color), 0 0 400px var(--glow-color);
+    }
+    30%,
+    70% {
+        filter: blur(2px) hue-rotate(360deg);
+        text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), 0 0 40px var(--glow-color),
+            0 0 80px var(--glow-color), 0 0 120px var(--glow-color), 0 0 200px var(--glow-color);
+    }
+
+    100% {
+        color: transparent;
+        box-shadow: none;
+        filter: blur(0px) hue-rotate(0deg);
+    }
+}

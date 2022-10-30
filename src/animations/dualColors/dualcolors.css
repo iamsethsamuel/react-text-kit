@@ -1,0 +1,38 @@
+.dualcolor :nth-child(2) {
+    clip-path: inset(-1% -1% 50% -1%);
+    color: var(--second-color);
+    position: absolute;
+    animation: var(--animate-2) linear var(--dual-animation-speed) var(--dual-animation-type);
+}
+
+.dualcolor {
+    color: var(--first-color);
+
+    display: block;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dualcolor:nth-child(1){
+    animation: var(--animate-1) linear var(--dual-animation-speed) var(--dual-animation-type);
+}
+
+@keyframes dualcolor-animate1 {
+    from {
+        color: var(--first-color);
+    }
+    to {
+        color: var(--second-color);
+    }
+}
+
+@keyframes dualcolor-animate2 {
+    from {
+        color: var(--second-color);
+    }
+    to {
+        color: var(--first-color);
+    }
+}

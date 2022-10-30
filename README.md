@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# React Text Kit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a collection of components that helps you create beatiful text effects and animations in your React project
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+```typescript
+import Glitch from "./animations/glitch/Glitch";
 
-### `npm start`
+<Glitch style={{ fontSize: "2em", width: "100%", color: "white", textAlign: "left" }} animate>
+    Edit save to reload.
+</Glitch>;
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It worked by just wrapping the text you want the effect to be applied to in with the effect component. You can completely customize the components with you custom style. Most of the styles are written in CSS, so making the library to be super light
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Components
 
-### `npm test`
+> - Circlular
+> - Clip
+> - DualColors
+> - Glitch
+> - Glow
+> - Light
+> - Swoosh
+> - Text3d
+> - TypeWritter
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## License
 
-### `npm run build`
+MIT
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+The library is open to anyone to contribute and create any text effect they want

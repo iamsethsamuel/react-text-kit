@@ -1,0 +1,49 @@
+.glitch {
+    display: grid;
+    place-items: center;
+    text-shadow: 0.05em 0 0 var(--first-color), -0.02em -0.05em 0 var(--second-color),
+        0.025em 0.05em 0 var(--third-color);
+    position: relative;
+    animation: var(--glitch-text-animation) var(--glitch-text-speed) var(--glitch-text-animation-type);
+}
+.glitch span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+/* .glitch :first-child { */
+    /* animation: var(--glitch-text-animation) calc(var(--glitch-text-speed) + 200) var(--glitch-text-animation-type); */
+    /* color: var(--first-color); */
+    /* z-index: 1; */
+    /* transform: translate(-0.05em, -0.025em); */
+    /* clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%); */
+/* } */
+
+/* .glitch span:last-child {
+    animation: var(--glitch-text-animation) calc(var(--glitch-text-speed) + 200) var(--glitch-text-animation-type);
+    z-index: 2;
+    color: var(--second-color);
+    transform: translate(0.05em, 0.025em);
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+} */
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 var(--first-color), -0.02em -0.05em 0 var(--second-color),
+            0.025em 0.05em 0 var(--third-color);
+    }
+    14% {
+        text-shadow: 0.05em -0.025em 0 var(--first-color), 0.025em 0.025em 0 var(--second-color),
+            -0.05em -0.05em 0 var(--third-color);
+    }
+    15% {
+        text-shadow: -0.05em -0.025em 0 var(--first-color), 0.025em 0.025em 0 var(--second-color),
+            -0.05em -0.05em 0 var(--third-color);
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 var(--first-color), 0.05em 0 0 var(--second-color);
+    }
+    99% {
+        text-shadow: 0.025em 0.05em 0 var(--first-color), 0.05em 0 0 var(--second-color);
+    }
+}

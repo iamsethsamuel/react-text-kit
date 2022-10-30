@@ -1,0 +1,26 @@
+.typewritter {
+    border-right: var(--typewritter-blinker);
+    animation: blink infinite var(--typewritter-blinker-speed) step-end,
+        type-text var(--animation-type) var(--type-duration) steps(100, end);
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes blink {
+    50% {
+        border-right: var(--typewritter-blinker);
+    }
+    to, from {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes type-text {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

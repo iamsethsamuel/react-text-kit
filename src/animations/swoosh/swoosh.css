@@ -1,0 +1,16 @@
+.swoosh {
+    position: relative;
+}
+
+.swoosh > span::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: attr(filter-content);
+
+    filter: url(#motion-blur-filter);
+}
+
+#swoosh-svg {
+    display: none;
+}

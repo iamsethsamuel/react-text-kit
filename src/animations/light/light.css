@@ -1,0 +1,39 @@
+.light-text {
+    position: relative;
+    text-align: center;
+    outline: none;
+    line-height: 0.7em;
+    color: var(--light-text-color);
+    -webkit-box-reflect: below 1px linear-gradient(transparent, var(--light-text-reflection-color));
+    animation: var(--light-text-animation) var(--light-text-speed) linear var(--light-text-animation-type);
+}
+
+@keyframes light-blink {
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: var(--light-text-color);
+        text-shadow: none;
+    }
+
+    15.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    100% {
+        color: var(--light-text-color);
+        text-shadow: 0 0 10px var(--light-text-reflection-color), 0 0 20px var(--light-text-reflection-color),
+            0 0 40px var(--light-text-reflection-color), 0 0 80px var(--light-text-reflection-color),
+            0 0 160px var(--light-text-reflection-color);
+    }
+}
